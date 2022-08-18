@@ -1,0 +1,40 @@
+{
+  "name": "push-notifications",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "agent-base": "^6.0.2",
+    "asn1.js": "^5.4.1",
+    "bn.js": "^4.12.0",
+    "buffer-equal-constant-time": "^1.0.1",
+    "debug": "^4.3.4",
+    "ecdsa-sig-formatter": "^1.0.11",
+    "http_ece": "^1.1.0",
+    "https-proxy-agent": "^5.0.1",
+    "inherits": "^2.0.4",
+    "jwa": "^2.0.0",
+    "jws": "^4.0.0",
+    "minimalistic-assert": "^1.0.1",
+    "minimist": "^1.2.6",
+    "ms": "^2.1.2",
+    "safe-buffer": "^5.2.1",
+    "safer-buffer": "^2.1.2",
+    "urlsafe-base64": "^1.0.0",
+    "web-push": "^3.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogularaju/push-notifications.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gogularaju/push-notifications/issues"
+  },
+  "homepage": "https://github.com/gogularaju/push-notifications#readme"
+}

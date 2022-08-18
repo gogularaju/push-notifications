@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web push</title>
+</head>
+<body>
+    <div style='padding: 32px'>
+        <h2>Welcome to push notifications demo !</h2>
+        <h3>Please subscribe to push notifications if you really want to keep updated.</h3>
+        <button onclick="subscribeToPush()">Subscribe</button>
+    </div>
+
+    <script>
+        window.addEventListener('load', async() => {
+      const sw = navigator.serviceWorker.register('./serviceWorker.js');
+      console.log(sw)
+    })
+
+    const subscribeToPush = async () => {
+      if (navigator.serviceWorker) {
+        const sw = await navigator.serviceWorker.ready;
+        const push = await sw.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: 'BOiZP9BDP55PihPOblgbWrqBR2Y0BCTwgFllmwYAFxDRjKdSFhnV0vtjazYtoEpd4aQI8L1jwjzLf-M8rT8Jj_4' //public key
+        });
+        console.log('Response from server => ', JSON.stringify(push));
+      } else {
+        console.log('no sw')
+      }
+    };
+    </script>
+</body>
+</html>
